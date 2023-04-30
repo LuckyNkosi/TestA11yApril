@@ -40,8 +40,4 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build --if-present
-      - run: npm start & npx wait-on http://localhost:3000
-      - name: Run pa11y
-        run: |
-          npm install -g pa11y
-          pa11y
+      - run: npm start & npx wait-on http://localhost:3000 && pa11y-ci
