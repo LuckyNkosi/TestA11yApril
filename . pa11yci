@@ -4,7 +4,6 @@
     },
     "urls": [
         "http://localhost:3000/about.html",
-        "https://cdpn.io/pen/debug/yLqOaEP",
         "http://localhost:3000"
     ]
 }
