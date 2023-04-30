@@ -38,7 +38,7 @@ jobs:
       with:
         directory: ${{ github.workspace }}
         port: 3000
-    - run: curl -vvvv http://localhost:3000/index.html
+    - run: npm run test:ci
   
   global-pa11y:
     runs-on: ubuntu-latest
