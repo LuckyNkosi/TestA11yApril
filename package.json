@@ -7,7 +7,7 @@
     "start": "node index.js",
     "test-jest": "jest",
     "test:gpt": "npm start &>/dev/null & echo 'Waiting for server to start...' && while ! nc -z localhost 3000; do sleep 1; done && npm test",
-    "test:ci": "npm start & wait-on http://localhost:3000 & pa11y-ci --config pa11y-ci.json && npm run posttest",
+    "test:ci": "npm start & wait-on http://localhost:3000 & pa11y-ci && npm run posttest",
     "posttest": "kill $(lsof -t -i:3000)",
     "test": "npm run test:ci"
   },
