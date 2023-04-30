@@ -23,8 +23,6 @@ jobs:
         with:
           start: test
           port: '3000'
-      - name: run manual
-        run: pa11y-ci 
   global-pa11y:
     runs-on: ubuntu-latest
     
