@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Echo Home
         run: echo $HOME
-  pa11y:
+  pa11y-ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
