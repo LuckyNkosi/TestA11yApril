@@ -23,6 +23,23 @@ jobs:
         with:
           start: test
           port: '3000'
+  own-server:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [16.x]
+        chrome-version: [latest]
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Serve Files
+      uses: Eun/http-server-action@v1
+      with:
+        directory: ${{ github.workspace }}
+        port: 3000
+    - run: curl -vvvv http://localhost:3000/index.html
+  
   global-pa11y:
     runs-on: ubuntu-latest
     
