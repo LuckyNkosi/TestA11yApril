@@ -3,8 +3,8 @@
         "timeout": 50000
     },
     "urls": [
-        "http://localhost:3000",
         "http://localhost:3000/about.html",
-        "https://cdpn.io/pen/debug/yLqOaEP"
+        "https://cdpn.io/pen/debug/yLqOaEP",
+        "http://localhost:3000"
     ]
 }
