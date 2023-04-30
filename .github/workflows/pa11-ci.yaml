@@ -7,7 +7,12 @@ on:
   pull_request:
     branches:
       - main
-jobs: 
+jobs:
+  echo-home:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Home
+        run: echo $HOME
   pa11y:
     runs-on: ubuntu-latest
     steps:
