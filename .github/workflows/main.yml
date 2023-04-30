@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: browser-actions/setup-chrome@latest
-      - uses: Hesedi3l/pa11y-actions@v2
+      - uses: Hesedi3l/pa11y-actions@v1
         with:
           start: start
           port: '3000'
