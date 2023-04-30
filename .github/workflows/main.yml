@@ -38,6 +38,7 @@ jobs:
       with:
         directory: ${{ github.workspace }}
         port: 3000
+    - run: npm ci
     - run: npm run test:ci
   
   global-pa11y:
