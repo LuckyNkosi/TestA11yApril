@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test-jest": "jest",
-    "test:gpt": "npm start &>/dev/null & echo 'Waiting for server to start...' && while ! nc -z localhost 3000; do sleep 1; done && npm test",
+    "test:jest": "jest",
+    "test": "npm start & wait-on http://localhost:3000 & pa11y",
     "test:ci": "npm start & wait-on http://localhost:3000 & pa11y-ci --config ./pa11y.json",
-    "posttest": "kill $(lsof -t -i:3000)",
-    "test": "npm run test:ci"
+    "posttest": "kill $(lsof -t -i:3000)"
   },
-  "author": "Me",
+  "author": "Lucky Nkosi",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
